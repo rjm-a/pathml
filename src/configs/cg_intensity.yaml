@@ -1,0 +1,26 @@
+data:
+  img_prefix: /videos/rawframes
+  tensor_img_prefix: /videos/npy_images/
+  train:
+    # ann_file: /videos/labels/Trimmed/primary_posture_train.csv
+    # joint_file: /videos/jointlocs/FullAug/exp_primary_posture_train.json
+    ann_file: /videos/labels/Trimmed/primary_intensity_val.csv
+    joint_file: /videos/jointlocs/FullAug/exp_primary_intensity_val.json 
+  val:
+    # ann_file: /videos/labels/Trimmed/primary_posture_val.csv
+    # joint_file: /videos/jointlocs/FullAug/exp_primary_posture_val.json
+    ann_file: /videos/labels/Trimmed/primary_intensity_test.csv
+    joint_file: /videos/jointlocs/FullAug/exp_primary_intensity_test.json
+model:
+  classes: 12
+  layers: 3
+  hidden_size: 510
+train_settings:
+  batch_size: 32
+  epochs: 6
+  learning_rate: 0.0005
+  dropout: 0.5
+images:
+  height: 164
+  width: 290
+  cnn_path: '/modules/ucf101/models/ucf_101_res.pt'

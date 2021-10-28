@@ -1,0 +1,19 @@
+data:
+  img_prefix: /videos/rawframes
+  train:
+    ann_file: /videos/labels/Trimmed/coding_train.csv
+    joint_file: /videos/jointlocs/TrimmedNoConf/coding_joints_train.json
+  val:
+    ann_file: /videos/labels/Trimmed/coding_val.csv
+    joint_file: /videos/jointlocs/TrimmedNoConf/coding_joints_val.json
+  test:
+    ann_file: /videos/labels/Trimmed/coding_test.csv
+    joint_file: /videos/jointlocs/TrimmedNoConf/coding_joints_test.json
+model:
+  classes: 2
+  layers: 2
+  hidden_size: 64
+train_settings:
+  batch_size: 32
+  epochs: 12
+  learning_rate: 0.0005

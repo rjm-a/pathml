@@ -1,0 +1,19 @@
+data:
+  img_prefix: /videos/rawframes
+  train:
+    ann_file: /videos/labels/Trimmed/primary_posture_train.csv
+    joint_file: /videos/jointlocs/TrimmedNoConf/primary_posture_joints_train.json
+  val:
+    ann_file: /videos/labels/Trimmed/primary_posture_val.csv
+    joint_file: /videos/jointlocs/TrimmedNoConf/primary_posture_joints_val.json
+  test:
+    ann_file: /videos/labels/Trimmed/primary_posture_test.csv
+    joint_file: /videos/jointlocs/TrimmedNoConf/primary_posture_joints_test.json
+model:
+  classes: 12
+  layers: 2
+  hidden_size: 64
+train_settings:
+  batch_size: 32
+  epochs: 12
+  learning_rate: 0.0005
